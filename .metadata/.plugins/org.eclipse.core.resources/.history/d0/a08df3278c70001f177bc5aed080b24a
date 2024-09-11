@@ -1,0 +1,30 @@
+package br.itb.projeto.CentroArtesMarciais.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import br.itb.projeto.CentroArtesMarciais.model.entity.Plano;
+import br.itb.projeto.CentroArtesMarciais.model.repository.PlanoRepository;
+
+@Service
+public class PlanoService {
+	private PlanoRepository planoRepository;
+
+	public PlanoService(PlanoRepository planoRepository) {
+		super();
+		this.planoRepository = planoRepository;
+	}
+
+	public List<Plano> findAll() {
+		List<Plano> Planos = planoRepository.findAll();
+
+		return Planos;
+	}
+
+	public Plano findById(long id) {
+		Plano plano = planoRepository.findById(id).orElseThrow();
+
+		return plano;
+	}
+}

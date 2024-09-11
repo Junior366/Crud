@@ -1,0 +1,34 @@
+package br.itb.projeto.CentroArtesMarciais.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import br.itb.projeto.CentroArtesMarciais.model.entity.Mensalidade;
+import br.itb.projeto.CentroArtesMarciais.model.repository.MensalidadeRepository;
+
+@Service
+public class MensalidadeService {
+	
+	private MensalidadeRepository mensalidadeRepository;
+	
+	public MensalidadeService(MensalidadeRepository mensalidadeRepository) {
+		super();
+		this.mensalidadeRepository = mensalidadeRepository;
+
+	}
+
+	public List<Mensalidade> findAll() {
+		List<Mensalidade> mensalidades = mensalidadeRepository.findAll();
+
+		return mensalidades;
+	}
+
+	public Mensalidade findById(long id) {
+		Mensalidade mensalidade = mensalidadeRepository.findById(id).orElseThrow();
+
+		return mensalidade;
+		
+	}
+}
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="searchhistory">
+		<item value="plano"/>
+		<item value="Plano"/>
+		<item value="Membro"/>
+		<item value="membro"/>
+		<item value="usuario"/>
+		<item value="Usuario"/>
+		<item value="membroTurma"/>
+		<item value="MembroTurmaTurma"/>
+	</list>
+	<list key="replacehistory">
+		<item value="turma"/>
+		<item value="Turma"/>
+		<item value="plano"/>
+		<item value="Plano"/>
+		<item value="mensalidade"/>
+		<item value="Mensalidade"/>
+		<item value="membroTurma"/>
+		<item value="MembroTurma"/>
+	</list>
+</section>

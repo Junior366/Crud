@@ -1,0 +1,30 @@
+package br.itb.projeto.CentroArtesMarciais.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import br.itb.projeto.CentroArtesMarciais.model.entity.Turma;
+import br.itb.projeto.CentroArtesMarciais.model.repository.TurmaRepository;
+
+@Service
+public class TurmaService {
+	private TurmaRepository turmaRepository;
+
+	public TurmaService(TurmaRepository turmaRepository) {
+		super();
+		this.turmaRepository = turmaRepository;
+
+	}
+	public List<Turma> findAll() {
+		List<Turma> turmas = turmaRepository.findAll();
+
+		return turmas;
+	}
+
+	public Turma findById(long id) {
+		Turma turma = turmaRepository.findById(id).orElseThrow();
+
+		return turma;
+	}
+}
